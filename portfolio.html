@@ -14,37 +14,46 @@
     <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <nav>
-            <a href="/" class="logo"> <span class="part-one-logo">Web</span><span class="part-two-logo">Studio</span></a>
-            <ul class="list site-nav">
-                <li><a href="./index.html" class="link">Студия</a></li>
-                <li><a href="./portfolio.html" class="link current">Портфолио</a></li>
-                <li><a href="/" class="link">Контакты</a></li>
-            </ul>
-        </nav>
+        <div class="container main-nav">
+            <nav class="site-nav">
     
-        <address>
-            <ul class="auth-nav list">
-                <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-                <li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+                <a href="/" class="logo"> <span class="part-one-logo">Web</span><span
+                        class="part-two-logo">Studio</span></a>
+    
+                <ul class="pages list ">
+                <li class="item"><a href="./index.html" class="link">Студия</a></li>
+                <li class="item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
+                <li class="item"><a href="/" class="link">Контакты</a></li>
             </ul>
-        </address>
+            </nav>
+            
+            <address>
+                <ul class="address-nav list">
+                    <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+                    <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+                </ul>
+            </address>
+            </div>
     </header>
 
     <main>      
-             
-        <section class="examples">
+             <!--EXAMPLES  -->
+        <section class="section examples">
             <h1 class="visually-hidden">Наши работы</h1>
             
             <!-- Фильтр, набор радиокнопок, клас "фильтр" -->
-            <ul class="list">
+            <div class="container">
+            <ul class="list button-list">
                 <li><button type="button" class="button-filter">Все</button></li>
                 <li><button type="button" class="button-filter">Веб-сайты</button></li>
                 <li><button type="button" class="button-filter">Приложения</button></li>
                 <li><button type="button" class="button-filter">Дизайн</button></li>
                 <li><button type="button" class="button-filter">Маркетинг</button></li>
             </ul>
+
+            <div class="example-show">
 
             <ul class="list">
                 <li>                    
@@ -101,11 +110,17 @@
                     <p class="examples-type">Приложение</p>
                 </li>
             </ul>
+            </div>
+        </div>
+        
         </section>
     </main>
 
-<footer class="footer-block">
-    <a href="/" class="logo"> <span class="part-one-logo">Web</span><span class="part-three-logo">Studio</span></a>
+<!-- FOOTER SECTION -->
+
+<footer class="footer-block container">
+    <a href="/" class="logo footer-sign"> <span class="part-one-logo">Web</span><span
+            class="part-three-logo">Studio</span></a>
     <address class="address-block">
         <ul class="list">
             <li><a href="/" class="address-footer">г. Киев, пр-т Леси Украинки, 26</a></li>

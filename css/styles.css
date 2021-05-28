@@ -13,8 +13,15 @@
   --graphite-dark: #212121;
 }
 
-.list {
-  list-style: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
 }
 
 body {
@@ -26,7 +33,40 @@ body {
   line-height: 1.71;
 }
 
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
+/* BUTTONS */
+
+.button {
+}
+
+/* HEADER */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
 .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -47,8 +87,29 @@ body {
   color: var(--white-text);
 }
 
-/* Site nav */
+/* SITE NAV */
+
+.site-nav {
+  display: flex;
+}
+
+.pages {
+  display: flex;
+  margin-left: 93px;
+}
+
+.pages .item + .item {
+  margin-left: 50px;
+}
+
+.pages .item:last-child {
+  margin-right: 0;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--graphite-dark);
 
   font-weight: 500;
@@ -67,8 +128,21 @@ body {
   color: var(--blue-color);
 }
 
-/* Auth nav */
-.auth-nav .link {
+/* ADDRESS-NAV */
+.address-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.address-nav .item + .item {
+  margin-left: 50px;
+}
+
+.address-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--grey-text);
 
   font-style: normal;
@@ -79,17 +153,22 @@ body {
   text-decoration: none;
 }
 
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+.address-nav .link:hover,
+.address-nav .link:focus {
   color: var(--blue-color);
 }
 
-/* Hero */
+/* HERO */
 .hero {
+  display: block;
+  padding-top: 200px;
   background-color: var(--dark-background);
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--white-text);
 
   font-weight: 900;
@@ -101,6 +180,12 @@ body {
 }
 
 .button-primary {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  margin-bottom: 200px;
+
   background-color: var(--blue-color);
   color: var(--white-text);
 
@@ -112,9 +197,36 @@ body {
   text-decoration: none;
 }
 
-/* Секции */
+/* SECTIONS */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ADVANTAGES SECTION */
+
+.advant-list {
+  display: flex;
+}
+
+.advant-list .item {
+  width: 270px;
+  margin-bottom: 0;
+}
+
+.advant-list .item + .item {
+  margin-left: 30px;
+}
 
 .advant-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--graphite-dark);
 
   font-weight: 700;
@@ -131,7 +243,28 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* SERVICES SECTION */
+
+.section.serv {
+  padding-top: 0;
+}
+
+.directions-list {
+  display: flex;
+}
+
+.direct-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.direct-item img {
+  display: block;
+  width: 370px;
+}
+
 .directions-title {
+  margin-bottom: 50px;
+
   color: var(--graphite-dark);
   font-weight: 700;
   font-size: 36px;
@@ -140,11 +273,32 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* TEAM SECTION */
+
 .team {
   background-color: var(--pale-background);
 }
 
+.team-members {
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-members-list {
+  display: flex;
+  text-align: center;
+}
+
+.team-members-list .team-member + .team-member {
+  margin-left: 30px;
+}
+
+.team-member > img {
+  width: 270px;
+  margin-bottom: 30px;
+}
+
 .team-title {
+  margin-bottom: 50px;
   color: var(--graphite-dark);
   font-weight: 700;
   font-size: 36px;
@@ -154,6 +308,8 @@ body {
 }
 
 .name-title {
+  margin-bottom: 10px;
+
   color: var(--graphite-dark);
 
   font-weight: 500;
@@ -163,13 +319,24 @@ body {
 }
 
 .position {
+  margin-bottom: 30px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
+/* EXAMPLES */
+
+.button-list {
+  display: flex;
+}
+
 .button-filter {
+  display: inline-block;
+  padding: 6px 22px;
+
   background-color: var(--pale-background);
   color: var(--graphite-dark);
 
@@ -184,6 +351,10 @@ body {
 .button-filter:focus {
   background-color: var(--blue-color);
   color: var(--white-text);
+}
+
+.examples-show {
+  display: flex;
 }
 
 .examples-title {
@@ -202,8 +373,17 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* FOOTER */
+
 .footer-block {
   background-color: var(--dark-background);
+}
+
+.logo.footer-sign {
+  display: inline-block;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .address-block {
