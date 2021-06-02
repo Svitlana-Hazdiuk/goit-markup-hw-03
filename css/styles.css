@@ -11,6 +11,7 @@
   --white-text-op60: rgba(255, 255, 255, 0.6);
 
   --graphite-dark: #212121;
+  --border-color: #ececec;
 }
 
 h1,
@@ -33,6 +34,10 @@ body {
   line-height: 1.71;
 }
 
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -45,12 +50,8 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+
   outline: 2px solid tomato;
-}
-
-/* BUTTONS */
-
-.button {
 }
 
 /* HEADER */
@@ -59,6 +60,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* LOGO */
@@ -257,11 +260,6 @@ body {
   margin-left: 30px;
 }
 
-.direct-item img {
-  display: block;
-  width: 370px;
-}
-
 .directions-title {
   margin-bottom: 50px;
 
@@ -292,9 +290,9 @@ body {
   margin-left: 30px;
 }
 
-.team-member > img {
-  width: 270px;
-  margin-bottom: 30px;
+.descript {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-title {
@@ -319,8 +317,6 @@ body {
 }
 
 .position {
-  margin-bottom: 30px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -329,8 +325,17 @@ body {
 
 /* EXAMPLES */
 
+.button-filter {
+  background-color: var(--pale-background);
+  border-radius: 4px;
+  border: transparent;
+}
+
 .button-list {
   display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
 }
 
 .button-filter {
@@ -353,8 +358,32 @@ body {
   color: var(--white-text);
 }
 
-.examples-show {
+.filter-item + .filter-item {
+  margin-left: 8px;
+}
+
+.examples-set {
   display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.examples-set > .exm-item {
+  flex-basis: calc(100% / 3 - 30px);
+
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.exm-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.exm-item .item-descript {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .examples-title {
@@ -375,6 +404,11 @@ body {
 
 /* FOOTER */
 
+.footer-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-block {
   background-color: var(--dark-background);
 }
@@ -382,7 +416,6 @@ body {
 .logo.footer-sign {
   display: inline-block;
   padding: 0;
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 
