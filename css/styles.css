@@ -217,6 +217,10 @@ img {
 
 /* ADVANTAGES SECTION */
 
+.section.advant {
+  padding-bottom: 47px;
+}
+
 .advant-list {
   display: flex;
 }
@@ -252,7 +256,7 @@ img {
 /* SERVICES SECTION */
 
 .section.serv {
-  padding-top: 0;
+  padding-top: 47px;
 }
 
 .directions-list {
