@@ -12,7 +12,7 @@
 
   --graphite-dark: #212121;
   --border-color: #ececec;
-  --examples-set-gap: 30px;
+  --set-gap: 30px;
 }
 
 h1,
@@ -299,10 +299,17 @@ img {
 .team-members-list {
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * var(--set-gap));
+  margin-top: calc(-1 * var(--set-gap));
 }
 
-.team-members-list .team-member + .team-member {
-  margin-left: 30px;
+.team-members-list .team-member {
+  flex-basis: calc(100% / 4 - var(--set-gap));
+
+  margin-top: var(--set-gap);
+  margin-left: var(--set-gap);
 }
 
 .descript {
@@ -381,15 +388,15 @@ img {
   display: flex;
   flex-wrap: wrap;
 
-  margin-left: calc(-1 * var(--examples-set-gap));
-  margin-top: calc(-1 * var(--examples-set-gap));
+  margin-left: calc(-1 * var(--set-gap));
+  margin-top: calc(-1 * var(--set-gap));
 }
 
 .examples-set > .exm-item {
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc(100% / 3 - var(--set-gap));
 
-  margin-left: var(--examples-set-gap);
-  margin-top: var(--examples-set-gap);
+  margin-left: var(--set-gap);
+  margin-top: var(--set-gap);
 }
 
 .exm-item {
