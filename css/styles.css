@@ -67,12 +67,14 @@ img {
 
 /* HEADER */
 
+header {
+  border-bottom: 1px solid var(--border-color);
+}
+
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  border-bottom: 1px solid var(--border-color);
 }
 
 /* LOGO */
@@ -129,7 +131,6 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02;
   text-decoration: none;
 }
 
@@ -163,7 +164,6 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02;
   text-decoration: none;
 }
 
@@ -174,8 +174,11 @@ img {
 
 /* HERO */
 .hero {
-  display: block;
   padding-top: 200px;
+  padding-bottom: 200px;
+
+  display: block;
+
   background-color: var(--dark-background);
   text-align: center;
 }
@@ -189,7 +192,6 @@ img {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
-  letter-spacing: 0.06;
   text-transform: uppercase;
 }
 
@@ -198,7 +200,6 @@ img {
   min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
-  margin-bottom: 200px;
 
   background-color: var(--blue-color);
   color: var(--white-text);
@@ -315,6 +316,7 @@ img {
 .descript {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--white-text);
 }
 
 .team-title {
@@ -455,9 +457,16 @@ img {
 .address-footer {
   color: var(--white-text);
   text-decoration: none;
+  margin-bottom: 9px;
 }
 
 .contacts-footer {
+  color: var(--white-text-op60);
+  text-decoration: none;
+  margin-bottom: 9px;
+}
+
+.email-footer {
   color: var(--white-text-op60);
   text-decoration: none;
 }
